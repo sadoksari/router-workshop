@@ -1,12 +1,21 @@
+import {  Link,  Routes,  Route } from "react-router-dom";
+import AffListMovies from "./AffListMovies";
+import TrailerPage from "./Pages/TrailerPage";
+const App = () => {
 
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
+   return (
+      <div className="App">
+         
+        <Routes>    
       
-    </div>
-  );
-}
+          <Route path='/'                      element={<AffListMovies/>} /> 
+          <Route path='/trailerPage/:idMovie'  element={<TrailerPage  />} />
+         
+        </Routes>
+      </div>
+    );
+}  
 
 export default App;
+
+

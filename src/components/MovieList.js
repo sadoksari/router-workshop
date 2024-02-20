@@ -1,15 +1,23 @@
+import MovieCard from "./MovieCard";
 
-import React from "react";
-
-const MovieList = ( props) => {
+// afficher la liste des movies
+const MovieList = ( props ) => {
+ 
    return (
-     <>
-      {props.movies.map( (elem , index) =>( <MovieCard  title={ elem.title}  description ={ elem.description} 
-                                             posterUrl ={elem.posterUrl}  rate={ elem.rate }   />
-  
-                 )
-        )
-     </>
+    
+    <>
+    
+      { props.movies.map( (elem) => (   
+          
+             <MovieCard  title={ elem.title}  description ={ elem.description} id={elem.id}
+                                 posterUrl ={elem.posterUrl}  rate={ elem.rate }  trailer={elem.trailer}   /> 
+         
+
+        )  )
+
+      }
+    </>
+   )
 }   
 
 export default MovieList ;
